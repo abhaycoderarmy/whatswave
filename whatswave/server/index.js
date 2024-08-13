@@ -7,8 +7,9 @@ const cookiesParser = require('cookie-parser')
 
 const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
-    credentials : true
+    origin : "*",
+    credentials : true,
+    methods : "GET,POST"
 }))
 
 app.use(express.json())
